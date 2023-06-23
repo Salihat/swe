@@ -1,0 +1,108 @@
+.auth {
+   min-height: 85vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 3rem;
+   background-color: var(--color-success);
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+   box-shadow: var(--box-shadow);
+
+   .img {
+      animation: slide-down 0.5s ease;
+
+      h3 {
+         color: var(--color-white);
+         text-align: center;
+      }
+   }
+
+   .form {
+      width: 40rem;
+      padding: 3rem;
+      animation: slide-up 0.5s ease;
+      background-color: var(--color-white);
+
+      h3 {
+         color: var(--color-danger);
+         text-align: center;
+         text-decoration: underline;
+      }
+
+      p {
+         text-align: center;
+      }
+
+      form {
+         .input-section {
+            margin-top: 1rem;
+         }
+
+         input[type="text"],
+         input[type="email"],
+         input[type="password"],
+         input[type="number"] {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 300;
+            padding: 1rem;
+            margin: .5rem auto;
+            width: 100%;
+            border: 1px solid #777;
+            border-radius: 3px;
+            outline: none;
+         }
+
+         label {
+            font-size: 1.4rem;
+            color: var(--color-danger);
+            text-transform: uppercase;
+         }
+
+         .links {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+         }
+
+         p {
+            text-align: center;
+            margin: 1rem;
+         }
+      }
+
+      .register {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin-top: 1rem;
+      }
+   }
+
+   @keyframes slide-up {
+      0% {
+         transform: translateY(-5rem);
+      }
+
+      100% {
+         transform: translateY(0);
+      }
+   }
+
+   @keyframes slide-down {
+      0% {
+         transform: translateY(5rem);
+      }
+
+      100% {
+         transform: translateY(0);
+      }
+   }
+}
+
+@media screen and (max-width: 700px) {
+   .img {
+      display: none;
+   }
+}
