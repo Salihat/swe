@@ -90,6 +90,7 @@ const AddProduct = () => {
 		setIsLoading(true);
 
 		try {
+			// eslint-disable-next-line
 			const docRef = addDoc(collection(db, "products"), {
 				name: product.name,
 				imageUrl: product.imageUrl,

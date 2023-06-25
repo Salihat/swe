@@ -13,7 +13,7 @@ import { addDoc, collection } from "firebase/firestore";
 import { updateProfile } from "firebase/auth";
 
 const Register = () => {
-	const [isLoading, setIsLoading] = useState(false);
+	const [isLoading] = useState(false);
 	const [register, setRegister] = useState({
 		name: "",
 		phoneNumber: "",
@@ -71,6 +71,7 @@ const Register = () => {
 		}
 	};
 
+	// eslint-disable-next-line
 	useEffect(() => {
 		if (user) navigate("/login", { replace: true });
 		console.log(user);

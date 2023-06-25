@@ -1,10 +1,6 @@
 import {
-	collection,
 	deleteDoc,
 	doc,
-	onSnapshot,
-	orderBy,
-	query,
 } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
 import { useEffect, useState } from "react";

@@ -9,10 +9,7 @@ import Chart from "../../chart/Chart";
 import InfoBox from "../../infoBox/InfoBox";
 import styles from "./Home.module.scss";
 
-const earningIcon = <AiFillDollarCircle size={30} color="#b624ff" />;
 const productIcon = <BsCart size={30} color="#1f93ff" />;
-const ordersIcon = <FaCartArrowDown size={30} color="var(--color-danger)" />;
-
 
 const Home = () => {
 	const products = useSelector(selectProducts);

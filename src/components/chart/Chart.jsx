@@ -41,6 +41,7 @@ const Chart = () => {
 
 	// Create a new array of order status
 	const array = [];
+	// eslint-disable-next-line
 	products.map((item) => {
 		const {productStatus} = item;
 		array.push(productStatus);

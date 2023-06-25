@@ -7,7 +7,6 @@ import { toast } from "react-toastify";
 import { auth } from "../../firebase/config";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import Loader from "../../components/loader/Loader";
-import { useSelector } from "react-redux";
 
 const Login = () => {
 	const [email, setEmail] = useState("");
@@ -16,19 +15,13 @@ const Login = () => {
 
 	const navigate = useNavigate();
 
-	// const redirectUser = () => {
-	// 	if (previousUrl.includes("cart")) {
-	// 		return navigate("/cart");
-	// 	}
-	// 	navigate("/");
-	// };
-
 	const loginUser = (e) => {
 		e.preventDefault();
 		setIsLoading(true);
 
 		signInWithEmailAndPassword(auth, email, password)
 			.then((userCredential) => {
+				// eslint-disable-next-line
 				const user = userCredential.user;
 				setIsLoading(false);
 				toast.success("Login Successful 🙂");

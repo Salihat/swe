@@ -23,6 +23,7 @@ const useFetchDocument = (collectionName, documentId) => {
 		}
 	};
 
+	// eslint-disable-next-line
       useEffect(() => {
             getDocument()
       }, []);

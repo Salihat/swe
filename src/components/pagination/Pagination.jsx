@@ -10,7 +10,7 @@ const Pagination = ({
 	const pageNumbers = [];
 	const totalPages = totalProducts / productsPerPage;
 	// Limit the page numbers shown
-	const [pageNumberLimit, setPageNumberLimit] = useState(5);
+	const [pageNumberLimit] = useState(5);
 	const [maxPageNumberLimit, setMaxPageNumberLimit] = useState(5);
 	const [minPageNumberLimit, setMinPageNumberLimit] = useState(0);
 
@@ -45,6 +45,7 @@ const Pagination = ({
 	return (
 		<ul className={styles.pagination}>
 			<li onClick={paginatePrev} className={currentPage === pageNumbers[0] ? `${styles.hidden}` : null}>Prev</li>
+			// eslint-disable-next-line
 			{pageNumbers.map((number) => {
 				if (number < maxPageNumberLimit + 1 && number > minPageNumberLimit) {
 					return (

@@ -28,6 +28,7 @@ const useFetchCollection = (collectionName) => {
 		}
 	};
 
+	// eslint-disable-next-line
       useEffect(() => {
             getCollection()
       },[]);
