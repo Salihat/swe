@@ -45,7 +45,6 @@ const Pagination = ({
 	return (
 		<ul className={styles.pagination}>
 			<li onClick={paginatePrev} className={currentPage === pageNumbers[0] ? `${styles.hidden}` : null}>Prev</li>
-			// eslint-disable-next-line
 			{pageNumbers.map((number) => {
 				if (number < maxPageNumberLimit + 1 && number > minPageNumberLimit) {
 					return (
