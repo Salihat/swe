@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Product } from "../../components/product/index";
-import styles from "./Home.module.scss";
+// import styles from "./Home.module.scss";
 import banner from "../../assets/banner2.jpg";
 
 const Home = () => {
@@ -21,9 +21,9 @@ const Home = () => {
 
 	return (
 		<div>
-			<div className={styles.intro}>
+			{/* <div className={styles.intro}> */}
 				<img src={banner} alt="banner" width="100%" height="500px" />
-	</div>
+	{/* </div> */}
 			<Product />
 		</div>
 	);

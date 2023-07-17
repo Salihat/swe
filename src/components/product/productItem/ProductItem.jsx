@@ -35,7 +35,7 @@ const ProductItem = ({product, grid, id, name, price, sellerContact, desc, image
 
 			<div className={styles.content}>
 				<div className={styles.details}>
-					<p style={{color: "#000"}}>{shortenText(desc, 70)}</p>
+					{/* <p style={{color: "#000"}}>{shortenText(desc, 70)}</p> */}
 					<p>{`N${price}`}</p>
 					<h4>{shortenText(name, 18)}</h4>
 					<button className="--btn --btn-primary --btn-block" onClick={contactDetail}>Seller's Contact</button>
