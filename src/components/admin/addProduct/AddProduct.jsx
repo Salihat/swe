@@ -14,11 +14,12 @@ import styles from "./AddProduct.module.scss";
 const categories = [
 	{ id: 1, name: "Laptop" },
 	{ id: 2, name: "Phone" },
-	{ id: 3, name: "Car" },
+	{ id: 3, name: "Electronics" },
 	{ id: 4, name: "Books" },
 	{id: 5, name: "Shoes"},
 	{id: 6, name: "Clothings"},
-	{ id: 7, name: "Others"}, 
+	{id: 7, name: "Home Appliances"},
+	{ id: 8, name: "Others"}, 
 ];
 
 const initialState = {
