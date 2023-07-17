@@ -16,7 +16,9 @@ const categories = [
 	{ id: 2, name: "Phone" },
 	{ id: 3, name: "Car" },
 	{ id: 4, name: "Books" },
-	{ id: 5, name: "Others"}
+	{id: 5, name: "Shoes"},
+	{id: 6, name: "Clothings"},
+	{ id: 7, name: "Others"}, 
 ];
 
 const initialState = {
