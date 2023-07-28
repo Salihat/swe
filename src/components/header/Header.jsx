@@ -14,7 +14,7 @@ import {
 } from "../../redux/slice/authSlice";
 import ShowOnLogin, { ShowOnLogout } from "../hiddenLink/hiddenLink";
 import { AdminOnlyLink } from "../adminOnlyRoute/AdminOnlyRoute";
-import kasu_logo from "../../assets/kasu-em.png";
+import kasu_logo from "../../assets/logo-em.png";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 const logo = (
@@ -94,7 +94,7 @@ const Header = () => {
 	};
 
 	return (
-		<header className={scrollPage ? `${styles.fixed}` : null}>
+		<header className={scrollPage}>
 			<div className={styles.header}>
 				{logo}
 
