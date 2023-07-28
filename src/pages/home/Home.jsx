@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Product } from "../../components/product/index";
+import styles from "./Home.module.scss";
 import banner from "../../assets/banner3.jpg";
 
 const Home = () => {
@@ -18,12 +19,14 @@ const Home = () => {
     scrollToProducts();
   }, [url]);
 
-  return (
-    <div>
-      <img src={banner} alt="banner" width="100%" />
-      <Product />
-    </div>
-  );
+	return (
+		<div>
+			<div className={styles.intro}>
+				<img src={banner} alt="banner" width="100%"/>
+	</div>
+			<Product />
+		</div>
+	);
 };
 
 export default Home;
