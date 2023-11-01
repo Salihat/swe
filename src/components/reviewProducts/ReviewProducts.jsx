@@ -19,6 +19,7 @@ const ReviewProducts = () => {
 	const { id } = useParams();
 	const { document } = useFetchDocument("products", id);
 
+	const products = useSelector(selectProducts);
 	const userId = useSelector(selectUserId);
 	const userName = useSelector(selectUsername);
 
