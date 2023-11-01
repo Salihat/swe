@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import styles from "./Header.module.scss";
-import { FaTimes, FaUserCircle } from "react-icons/fa";
+import { FaShoppingCart, FaTimes, FaUserCircle } from "react-icons/fa";
 import { useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "../../firebase/config";
+import { auth } from "../../firebase/Config";
 import { toast } from "react-toastify";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -16,6 +16,7 @@ import ShowOnLogin, { ShowOnLogout } from "../hiddenLink/hiddenLink";
 import { AdminOnlyLink } from "../adminOnlyRoute/AdminOnlyRoute";
 import kasu_logo from "../../assets/logo-em.png";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { CALCULATE_TOTAL_QUANTITY, selectCartTotalQuantity } from "../../redux/slice/cartSlice";
 
 const logo = (
 	<div className={styles.logo}>
@@ -31,6 +32,12 @@ const Header = () => {
 	const [showMenu, setShowMenu] = useState(false);
 	const [displayName, setDisplayName] = useState("");
 	const [scrollPage, setScrollPage] = useState(false);
+
+	const cartTotalQuantity = useSelector(selectCartTotalQuantity);
+
+	useEffect(() =>{
+		dispatch(CALCULATE_TOTAL_QUANTITY())
+	}, [])
 
 	const navigate = useNavigate();
 
@@ -93,6 +100,16 @@ const Header = () => {
 			});
 	};
 
+	const cart = (
+		<span className={styles.cart}>
+			<Link to="/cart">
+				Cart
+				<FaShoppingCart size={20} />
+				<p>{cartTotalQuantity}</p>
+			</Link>
+		</span>
+	);
+
 	return (
 		<header className={scrollPage}>
 			<div className={styles.header}>
@@ -143,6 +160,12 @@ const Header = () => {
 
 					<div className={styles["header-right"]} onClick={hideMenu}>
 						<span className={styles.links}>
+						<ShowOnLogin>
+								<NavLink to="/order-history" className={activeLink}>
+									My Orders
+								</NavLink>
+							</ShowOnLogin>
+
 							<ShowOnLogout>
 								<NavLink to='/login' className={activeLink}>
 									Login
@@ -171,9 +194,11 @@ const Header = () => {
 								</a>
 							</ShowOnLogin>
 						</span>
+						{cart}
 					</div>
 				</nav>
 					<div className={styles["menu-icon"]}>
+					{cart}
             <HiOutlineMenuAlt3 size={28} onClick={toggleMenu} />
           </div>
 			</div>

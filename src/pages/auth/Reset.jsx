@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { toast } from "react-toastify";
-import { auth } from "../../firebase/config";
+import { auth } from "../../firebase/Config";
 import Loader from "../../components/loader/Loader";
 
 const Reset = () => {
@@ -28,7 +28,7 @@ const Reset = () => {
 	};
 
 	return (
-		<>
+		<section className={styles.mainContainer}>
 			{isLoading && <Loader />}
 			<section className={`container ${styles.auth}`}>
 				<div className={styles.img}>
@@ -65,7 +65,7 @@ const Reset = () => {
 					</div>
 				</Card>
 			</section>
-		</>
+		</section>
 	);
 };
 

@@ -1,7 +1,7 @@
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { db } from "../firebase/config";
+import { db } from "../firebase/Config";
 
 
 const useFetchCollection = (collectionName) => {
