@@ -53,7 +53,7 @@ const Cart = () => {
 
   const checkout = () => {
     if (isLoggedIn) {
-      navigate("/checkout-details");
+      navigate("/checkout");
     } else {
       dispatch(SAVE_URL(url));
       navigate("/login");
