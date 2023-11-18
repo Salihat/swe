@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import StarsRating from "react-star-rate";
 import { toast } from "react-toastify";
 import useFetchDocument from "../../customHooks/useFetchDocument";
-import { db } from "../../firebase/Config";
+import { db } from "../../firebase/config";
 import { selectUserId, selectUsername } from "../../redux/slice/authSlice";
 import { selectProducts } from "../../redux/slice/productSlice";
 import Card from "../card/Card";

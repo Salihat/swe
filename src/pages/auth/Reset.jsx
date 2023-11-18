@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { sendPasswordResetEmail } from "firebase/auth";
 import { toast } from "react-toastify";
-import { auth } from "../../firebase/Config";
+import { auth } from "../../firebase/config";
 import Loader from "../../components/loader/Loader";
 
 const Reset = () => {

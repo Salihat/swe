@@ -5,7 +5,7 @@ import { Link, redirect, useNavigate } from "react-router-dom";
 import { FaGoogle } from "react-icons/fa";
 import Card from "../../components/card/Card";
 import { toast } from "react-toastify";
-import { auth } from "../../firebase/Config";
+import { auth } from "../../firebase/config";
 import { GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import Loader from "../../components/loader/Loader";
 import { useSelector } from "react-redux";

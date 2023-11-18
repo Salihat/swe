@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import { FaEdit, FaTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import { db, storage } from "../../../firebase/Config";
+import { db, storage } from "../../../firebase/config";
 import Loader from "../../loader/Loader";
 import styles from "./ViewProducts.module.scss";
 import Notiflix from "notiflix";

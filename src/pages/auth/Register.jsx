@@ -4,7 +4,7 @@ import registerImg from "../../assets/register1.png";
 import { Link, useNavigate } from "react-router-dom";
 import Card from "../../components/card/Card";
 import { useState } from "react";
-import { auth, db } from "../../firebase/Config";
+import { auth, db } from "../../firebase/config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import Loader from "../../components/loader/Loader";
 import { toast } from "react-toastify";

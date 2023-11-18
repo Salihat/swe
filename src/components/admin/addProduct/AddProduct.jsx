@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
-import { db, storage } from "../../../firebase/Config";
+import { db, storage } from "../../../firebase/config";
 import { selectProducts } from "../../../redux/slice/productSlice";
 import Card from "../../card/Card";
 import Loader from "../../loader/Loader";

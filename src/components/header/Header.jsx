@@ -4,7 +4,7 @@ import styles from "./Header.module.scss";
 import { FaShoppingCart, FaTimes, FaUserCircle } from "react-icons/fa";
 import { useState } from "react";
 import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from "../../firebase/Config";
+import { auth } from "../../firebase/config";
 import { toast } from "react-toastify";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";

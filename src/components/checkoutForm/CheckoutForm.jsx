@@ -13,7 +13,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectEmail, selectUserId } from "../../redux/slice/authSlice";
 import { CLEAR_CART, selectCartItems, selectCartTotalAmount } from "../../redux/slice/cartSlice";
 import { selectShippingAddress } from "../../redux/slice/checkoutSlice";
-import { db } from "../../firebase/Config";
+import { db } from "../../firebase/config";
 import { addDoc, collection, Timestamp } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 

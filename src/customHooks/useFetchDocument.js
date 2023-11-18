@@ -1,7 +1,7 @@
 import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
-import { db } from "../firebase/Config";
+import { db } from "../firebase/config";
 
 
 const useFetchDocument = (collectionName, documentId) => {
