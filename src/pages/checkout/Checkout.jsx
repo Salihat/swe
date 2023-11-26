@@ -18,6 +18,9 @@ import CheckoutForm from "../../components/checkoutForm/CheckoutForm";
 import { toast } from "react-toastify";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PK);
+const serverUrl = process.env.NODE_ENV === 'production'
+  ? ''
+  : 'http://localhost:4242';
 
 const Checkout = () => {
 	const [message, setMessage] = useState("Initializing checkout...");
@@ -39,7 +42,7 @@ const Checkout = () => {
 
 	useEffect(() => {
 		// Create PaymentIntent as soon as the page loads
-		fetch("http://localhost:4242/create-payment-intent", {
+		fetch(`${serverUrl}/create-payment-intent`, {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify({ 
