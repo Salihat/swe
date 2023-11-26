@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import {Header, Footer} from './components';
 import {Home, Contact, Login, Register, Reset, Admin} from  './pages';
@@ -17,6 +17,15 @@ import NotFound from './pages/notFound/NotFound';
 
 
 function App() { 
+
+// 	const [message, setMessage] = useState("");
+
+//   useEffect(() => {
+//     fetch("http://localhost:4242/")
+//       .then((res) => res.json())
+//       .then((data) => setMessage(data.message));
+//   }, []);
+
 	return (
 		<>
 			<BrowserRouter>

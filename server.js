@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-	res.send("Welcome to Kasu E-Market Platform");
+	res.listen(4242,"Welcome to Kasu E-Market Platform");
 });
 
 const array = [];

@@ -2,6 +2,7 @@
   "name": "jsx",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:4242/create-payment-intent",
   "dependencies": {
     "@capacitor/android": "^5.5.1",
     "@capacitor/cli": "^5.5.1",
@@ -40,7 +41,8 @@
   "scripts": {
     "start:frontend": "react-scripts start",
     "start:backend": "nodemon server.js",
-    "start": "node server",
+    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "react-start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -62,5 +64,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
