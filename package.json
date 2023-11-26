@@ -41,7 +41,7 @@
   "scripts": {
     "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
     "start:frontend": "react-scripts start",
-    "start:backend": "nodemon functions/create-payment-intent.js",
+    "start:backend": "nodemon server.js",
     "react-start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -67,5 +67,8 @@
   },
   "devDependencies": {
     "concurrently": "^8.2.2"
+  },
+  "netlify": {
+    "functions": "functions"
   }
 }

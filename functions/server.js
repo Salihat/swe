@@ -7,9 +7,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// app.get("/", (req, res) => {
-// 	res.send(4242,"Welcome to Kasu E-Market Platform");
-// });
+app.get("/", (req, res) => {
+	res.send("Welcome to Kasu E-Market Platform");
+});
 
 const array = [];
 const calculateOrderAmount = (items) => {
@@ -56,7 +56,5 @@ app.post("/create-payment-intent", async (req, res) => {
 	});
 });
 
-module.exports = app;
-
-// const PORT = process.env.PORT || 4242;
-// app.listen(PORT, () => console.log(`Node server listening on port ${PORT}`));
+const PORT = process.env.PORT || 4242;
+app.listen(PORT, () => console.log(`Node server listening on port ${PORT}`));
