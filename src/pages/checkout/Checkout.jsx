@@ -38,7 +38,7 @@ const Checkout = () => {
 		dispatch(CALCULATE_TOTAL_QUANTITY());
 	}, [dispatch, cartItems]);
 
-      const description = `eShop payment: email: ${customerEmail}, Amount: ${totalAmount}`
+      const description = `Kasu E-market payment: email: ${customerEmail}, Amount: ${totalAmount}`
 
 	useEffect(() => {
 		// Create PaymentIntent as soon as the page loads
