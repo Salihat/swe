@@ -41,7 +41,7 @@
   "scripts": {
     "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
     "start:frontend": "react-scripts start",
-    "start:backend": "nodemon server.js",
+    "start:backend": "nodemon functions/create-payment-intent.js",
     "react-start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

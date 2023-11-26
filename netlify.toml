@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/create-payment-intent"
-  to = "http://localhost:4242/create-payment-intent"
-  status = 200
-  force = true
