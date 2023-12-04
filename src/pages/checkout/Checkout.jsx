@@ -19,7 +19,7 @@ import { toast } from "react-toastify";
 
 const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PK);
 const serverUrl = process.env.NODE_ENV === 'production'
-  ? ''
+  ? '.netlify/functions/server'
   : 'http://localhost:4242';
 
 const Checkout = () => {
